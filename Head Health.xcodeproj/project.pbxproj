@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C441A7C1775F887003B4A5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A771775F673003B4A5B /* MainViewController.m */; };
-		0C441A7D1775F891003B4A5B /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A7A1775F67E003B4A5B /* UpdateViewController.m */; };
-		0C441A7E1775F899003B4A5B /* HomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A731775F669003B4A5B /* HomeworkViewController.m */; };
-		0C441A821775FC26003B4A5B /* HealthPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A801775FC26003B4A5B /* HealthPlanViewController.m */; };
-		0C441A831775FC26003B4A5B /* HealthPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C441A811775FC26003B4A5B /* HealthPlanViewController.xib */; };
 		8D1FE2A51775D190000113DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A41775D190000113DE /* UIKit.framework */; };
 		8D1FE2A71775D190000113DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A61775D190000113DE /* Foundation.framework */; };
 		8D1FE2A91775D190000113DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A81775D190000113DE /* CoreGraphics.framework */; };
@@ -23,21 +18,19 @@
 		8D1FE2BB1775D190000113DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2BA1775D190000113DE /* Default-568h@2x.png */; };
 		8D1FE2C51775D1DF000113DE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FE2C31775D1DF000113DE /* LoginViewController.m */; };
 		8D1FE2C61775D1DF000113DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2C41775D1DF000113DE /* LoginViewController.xib */; };
+		8D1FE2D4177609CD000113DE /* HomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FE2CC177609CD000113DE /* HomeworkViewController.m */; };
+		8D1FE2D5177609CD000113DE /* HomeworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2CD177609CD000113DE /* HomeworkViewController.xib */; };
+		8D1FE2D6177609CD000113DE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FE2CF177609CD000113DE /* MainViewController.m */; };
+		8D1FE2D7177609CD000113DE /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2D0177609CD000113DE /* MainViewController.xib */; };
+		8D1FE2D8177609CD000113DE /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FE2D2177609CD000113DE /* UpdateViewController.m */; };
+		8D1FE2D9177609CD000113DE /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2D3177609CD000113DE /* UpdateViewController.xib */; };
+		8D1FE2DD17760A63000113DE /* HealthPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FE2DB17760A63000113DE /* HealthPlanViewController.m */; };
+		8D1FE2DE17760A63000113DE /* HealthPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2DC17760A63000113DE /* HealthPlanViewController.xib */; };
+		8D1FE2E3177639D6000113DE /* stuff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2E2177639D6000113DE /* stuff.png */; };
+		8D1FE2E517763A5B000113DE /* stuff2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2E417763A5B000113DE /* stuff2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C441A721775F669003B4A5B /* HomeworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeworkViewController.h; sourceTree = "<group>"; };
-		0C441A731775F669003B4A5B /* HomeworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeworkViewController.m; sourceTree = "<group>"; };
-		0C441A741775F669003B4A5B /* HomeworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeworkViewController.xib; sourceTree = "<group>"; };
-		0C441A761775F673003B4A5B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		0C441A771775F673003B4A5B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		0C441A781775F673003B4A5B /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		0C441A791775F67E003B4A5B /* UpdateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
-		0C441A7A1775F67E003B4A5B /* UpdateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
-		0C441A7B1775F67E003B4A5B /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
-		0C441A7F1775FC26003B4A5B /* HealthPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthPlanViewController.h; path = ../HealthPlanViewController.h; sourceTree = "<group>"; };
-		0C441A801775FC26003B4A5B /* HealthPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthPlanViewController.m; path = ../HealthPlanViewController.m; sourceTree = "<group>"; };
-		0C441A811775FC26003B4A5B /* HealthPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HealthPlanViewController.xib; path = ../HealthPlanViewController.xib; sourceTree = "<group>"; };
 		8D1FE2A11775D190000113DE /* Head Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Head Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1FE2A41775D190000113DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8D1FE2A61775D190000113DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +47,20 @@
 		8D1FE2C21775D1DF000113DE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8D1FE2C31775D1DF000113DE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8D1FE2C41775D1DF000113DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8D1FE2CB177609CD000113DE /* HomeworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkViewController.h; sourceTree = "<group>"; };
+		8D1FE2CC177609CD000113DE /* HomeworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkViewController.m; sourceTree = "<group>"; };
+		8D1FE2CD177609CD000113DE /* HomeworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeworkViewController.xib; sourceTree = "<group>"; };
+		8D1FE2CE177609CD000113DE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8D1FE2CF177609CD000113DE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8D1FE2D0177609CD000113DE /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		8D1FE2D1177609CD000113DE /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		8D1FE2D2177609CD000113DE /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		8D1FE2D3177609CD000113DE /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		8D1FE2DA17760A63000113DE /* HealthPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthPlanViewController.h; sourceTree = "<group>"; };
+		8D1FE2DB17760A63000113DE /* HealthPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthPlanViewController.m; sourceTree = "<group>"; };
+		8D1FE2DC17760A63000113DE /* HealthPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthPlanViewController.xib; sourceTree = "<group>"; };
+		8D1FE2E2177639D6000113DE /* stuff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stuff.png; sourceTree = "<group>"; };
+		8D1FE2E417763A5B000113DE /* stuff2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stuff2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,10 @@
 		8D1FE2981775D190000113DE = {
 			isa = PBXGroup;
 			children = (
+				8D1FE2DF17763391000113DE /* assets */,
+				8D1FE2DA17760A63000113DE /* HealthPlanViewController.h */,
+				8D1FE2DB17760A63000113DE /* HealthPlanViewController.m */,
+				8D1FE2DC17760A63000113DE /* HealthPlanViewController.xib */,
 				8D1FE2AA1775D190000113DE /* Head Health */,
 				8D1FE2A31775D190000113DE /* Frameworks */,
 				8D1FE2A21775D190000113DE /* Products */,
@@ -100,18 +111,15 @@
 		8D1FE2AA1775D190000113DE /* Head Health */ = {
 			isa = PBXGroup;
 			children = (
-				0C441A791775F67E003B4A5B /* UpdateViewController.h */,
-				0C441A7A1775F67E003B4A5B /* UpdateViewController.m */,
-				0C441A7B1775F67E003B4A5B /* UpdateViewController.xib */,
-				0C441A761775F673003B4A5B /* MainViewController.h */,
-				0C441A771775F673003B4A5B /* MainViewController.m */,
-				0C441A781775F673003B4A5B /* MainViewController.xib */,
-				0C441A721775F669003B4A5B /* HomeworkViewController.h */,
-				0C441A731775F669003B4A5B /* HomeworkViewController.m */,
-				0C441A741775F669003B4A5B /* HomeworkViewController.xib */,
-				0C441A7F1775FC26003B4A5B /* HealthPlanViewController.h */,
-				0C441A801775FC26003B4A5B /* HealthPlanViewController.m */,
-				0C441A811775FC26003B4A5B /* HealthPlanViewController.xib */,
+				8D1FE2CB177609CD000113DE /* HomeworkViewController.h */,
+				8D1FE2CC177609CD000113DE /* HomeworkViewController.m */,
+				8D1FE2CD177609CD000113DE /* HomeworkViewController.xib */,
+				8D1FE2CE177609CD000113DE /* MainViewController.h */,
+				8D1FE2CF177609CD000113DE /* MainViewController.m */,
+				8D1FE2D0177609CD000113DE /* MainViewController.xib */,
+				8D1FE2D1177609CD000113DE /* UpdateViewController.h */,
+				8D1FE2D2177609CD000113DE /* UpdateViewController.m */,
+				8D1FE2D3177609CD000113DE /* UpdateViewController.xib */,
 				8D1FE2C11775D1AB000113DE /* View Controllers */,
 				8D1FE2B31775D190000113DE /* AppDelegate.h */,
 				8D1FE2B41775D190000113DE /* AppDelegate.m */,
@@ -142,6 +150,16 @@
 				8D1FE2C41775D1DF000113DE /* LoginViewController.xib */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8D1FE2DF17763391000113DE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				8D1FE2E2177639D6000113DE /* stuff.png */,
+				8D1FE2E417763A5B000113DE /* stuff2.png */,
+			);
+			name = assets;
+			path = "Head Health/assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +218,12 @@
 				8D1FE2B91775D190000113DE /* Default@2x.png in Resources */,
 				8D1FE2BB1775D190000113DE /* Default-568h@2x.png in Resources */,
 				8D1FE2C61775D1DF000113DE /* LoginViewController.xib in Resources */,
-				0C441A831775FC26003B4A5B /* HealthPlanViewController.xib in Resources */,
+				8D1FE2D5177609CD000113DE /* HomeworkViewController.xib in Resources */,
+				8D1FE2D7177609CD000113DE /* MainViewController.xib in Resources */,
+				8D1FE2D9177609CD000113DE /* UpdateViewController.xib in Resources */,
+				8D1FE2DE17760A63000113DE /* HealthPlanViewController.xib in Resources */,
+				8D1FE2E3177639D6000113DE /* stuff.png in Resources */,
+				8D1FE2E517763A5B000113DE /* stuff2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,13 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C441A7E1775F899003B4A5B /* HomeworkViewController.m in Sources */,
-				0C441A7D1775F891003B4A5B /* UpdateViewController.m in Sources */,
-				0C441A7C1775F887003B4A5B /* MainViewController.m in Sources */,
 				8D1FE2B11775D190000113DE /* main.m in Sources */,
 				8D1FE2B51775D190000113DE /* AppDelegate.m in Sources */,
 				8D1FE2C51775D1DF000113DE /* LoginViewController.m in Sources */,
-				0C441A821775FC26003B4A5B /* HealthPlanViewController.m in Sources */,
+				8D1FE2D4177609CD000113DE /* HomeworkViewController.m in Sources */,
+				8D1FE2D6177609CD000113DE /* MainViewController.m in Sources */,
+				8D1FE2D8177609CD000113DE /* UpdateViewController.m in Sources */,
+				8D1FE2DD17760A63000113DE /* HealthPlanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    usernameField.delegate = self;
+    passwordField.delegate = self;
+    
 }
 
 - (IBAction)login:(id)sender
@@ -41,9 +44,12 @@
         [self loginError:usernameError];
         return;
     }
-    
-    //Do something here to grab the login
-    //Do something else if the username is not found or password is incorrect
+    else
+    {
+        //Do something here to grab the login
+        //Do something else if the username is not found or password is incorrect
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }
 }
 
 -(void)loginError:(loginErrors)error

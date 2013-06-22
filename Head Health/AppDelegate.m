@@ -20,12 +20,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    self.firstView = [[MainViewController alloc]init];
+    self.firstView = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
     
-    UINavigationController * navcontroller = [[UINavigationController alloc]init];
-    [navcontroller setViewControllers:[NSArray arrayWithObject:self.firstView]];
-    
-    self.window.rootViewController = navcontroller;
+    UINavigationController * navcontroller = [[UINavigationController alloc] initWithRootViewController:self.firstView];
+    [[self window] setRootViewController:navcontroller];
     
     return YES;
 }

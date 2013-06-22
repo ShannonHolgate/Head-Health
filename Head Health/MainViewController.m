@@ -10,12 +10,15 @@
 #import "UpdateViewController.h"
 #import "HomeworkViewController.h"
 #import "HealthPlanViewController.h"
+#import "LoginViewController.h"
 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
+
+BOOL loggedin = false;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +33,15 @@
 {
     self.title  = @"Main";
     [super viewDidLoad];
+    
+    if (!loggedin)
+    {
+        LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+
+        // show the navigation controller modally
+        [self presentViewController:login animated:NO completion:nil];
+        
+    }
     // Do any additional setup after loading the view from its nib.
 }
 -(IBAction)howAreYou:(id)sender

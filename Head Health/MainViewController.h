@@ -10,7 +10,7 @@
 
 @interface MainViewController : UIViewController
 {
-    
+
 }
 
 -(IBAction)howAreYou:(id)sender;
