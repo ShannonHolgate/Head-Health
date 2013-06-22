@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextField *usernameField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;
 
 -(IBAction)login:(id)sender;
+
+typedef enum {
+    usernameError,
+    passwordError,
+    generalError
+} loginErrors;
+
+-(void)loginError:(loginErrors)error;
 
 @end

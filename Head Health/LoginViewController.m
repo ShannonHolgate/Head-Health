@@ -38,6 +38,7 @@
     if ([username length] == 0 || [password length] == 0)
     {
         NSLog(@"Username or Password empty");
+        [self loginError:usernameError];
         return;
     }
     
@@ -45,7 +46,35 @@
     //Do something else if the username is not found or password is incorrect
 }
 
--(void)loginError:
+-(void)loginError:(loginErrors)error
+{
+    UIAlertView * alert;
+    if (error == usernameError)
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Login Error" message:@"Username is incorrect or does not exist" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    else if(error == passwordError)
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Login Error" message:@"Password is incorrect" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    else if (error == generalError)
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"General error" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    else{
+        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"General error" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    
+    if (nil !=alert)
+    {
+        [alert show];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
 
 - (void)didReceiveMemoryWarning
 {
