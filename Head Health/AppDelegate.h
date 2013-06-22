@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class MainViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    MainViewController * firstView;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic,retain) MainViewController * firstView;
 
 @end

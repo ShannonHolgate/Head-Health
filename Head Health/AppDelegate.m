@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
+
+@synthesize firstView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,8 +20,12 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    LoginViewController *loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
-    self.window.rootViewController = loginViewController;
+    self.firstView = [[MainViewController alloc]init];
+    
+    UINavigationController * navcontroller = [[UINavigationController alloc]init];
+    [navcontroller setViewControllers:[NSArray arrayWithObject:self.firstView]];
+    
+    self.window.rootViewController = navcontroller;
     
     return YES;
 }

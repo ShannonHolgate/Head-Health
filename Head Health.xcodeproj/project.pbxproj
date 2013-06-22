@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C441A7C1775F887003B4A5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A771775F673003B4A5B /* MainViewController.m */; };
+		0C441A7D1775F891003B4A5B /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A7A1775F67E003B4A5B /* UpdateViewController.m */; };
+		0C441A7E1775F899003B4A5B /* HomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A731775F669003B4A5B /* HomeworkViewController.m */; };
 		8D1FE2A51775D190000113DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A41775D190000113DE /* UIKit.framework */; };
 		8D1FE2A71775D190000113DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A61775D190000113DE /* Foundation.framework */; };
 		8D1FE2A91775D190000113DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A81775D190000113DE /* CoreGraphics.framework */; };
@@ -21,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C441A721775F669003B4A5B /* HomeworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeworkViewController.h; sourceTree = "<group>"; };
+		0C441A731775F669003B4A5B /* HomeworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeworkViewController.m; sourceTree = "<group>"; };
+		0C441A741775F669003B4A5B /* HomeworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeworkViewController.xib; sourceTree = "<group>"; };
+		0C441A761775F673003B4A5B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0C441A771775F673003B4A5B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0C441A781775F673003B4A5B /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0C441A791775F67E003B4A5B /* UpdateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		0C441A7A1775F67E003B4A5B /* UpdateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		0C441A7B1775F67E003B4A5B /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
 		8D1FE2A11775D190000113DE /* Head Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Head Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1FE2A41775D190000113DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8D1FE2A61775D190000113DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +95,15 @@
 		8D1FE2AA1775D190000113DE /* Head Health */ = {
 			isa = PBXGroup;
 			children = (
+				0C441A791775F67E003B4A5B /* UpdateViewController.h */,
+				0C441A7A1775F67E003B4A5B /* UpdateViewController.m */,
+				0C441A7B1775F67E003B4A5B /* UpdateViewController.xib */,
+				0C441A761775F673003B4A5B /* MainViewController.h */,
+				0C441A771775F673003B4A5B /* MainViewController.m */,
+				0C441A781775F673003B4A5B /* MainViewController.xib */,
+				0C441A721775F669003B4A5B /* HomeworkViewController.h */,
+				0C441A731775F669003B4A5B /* HomeworkViewController.m */,
+				0C441A741775F669003B4A5B /* HomeworkViewController.xib */,
 				8D1FE2C11775D1AB000113DE /* View Controllers */,
 				8D1FE2B31775D190000113DE /* AppDelegate.h */,
 				8D1FE2B41775D190000113DE /* AppDelegate.m */,
@@ -181,6 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C441A7E1775F899003B4A5B /* HomeworkViewController.m in Sources */,
+				0C441A7D1775F891003B4A5B /* UpdateViewController.m in Sources */,
+				0C441A7C1775F887003B4A5B /* MainViewController.m in Sources */,
 				8D1FE2B11775D190000113DE /* main.m in Sources */,
 				8D1FE2B51775D190000113DE /* AppDelegate.m in Sources */,
 				8D1FE2C51775D1DF000113DE /* LoginViewController.m in Sources */,
@@ -263,6 +287,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Head Health/Head Health-Prefix.pch";
 				INFOPLIST_FILE = "Head Health/Head Health-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +299,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Head Health/Head Health-Prefix.pch";
 				INFOPLIST_FILE = "Head Health/Head Health-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
