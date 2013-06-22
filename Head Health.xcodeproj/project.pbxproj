@@ -10,6 +10,8 @@
 		0C441A7C1775F887003B4A5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A771775F673003B4A5B /* MainViewController.m */; };
 		0C441A7D1775F891003B4A5B /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A7A1775F67E003B4A5B /* UpdateViewController.m */; };
 		0C441A7E1775F899003B4A5B /* HomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A731775F669003B4A5B /* HomeworkViewController.m */; };
+		0C441A821775FC26003B4A5B /* HealthPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C441A801775FC26003B4A5B /* HealthPlanViewController.m */; };
+		0C441A831775FC26003B4A5B /* HealthPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C441A811775FC26003B4A5B /* HealthPlanViewController.xib */; };
 		8D1FE2A51775D190000113DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A41775D190000113DE /* UIKit.framework */; };
 		8D1FE2A71775D190000113DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A61775D190000113DE /* Foundation.framework */; };
 		8D1FE2A91775D190000113DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1FE2A81775D190000113DE /* CoreGraphics.framework */; };
@@ -33,6 +35,9 @@
 		0C441A791775F67E003B4A5B /* UpdateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
 		0C441A7A1775F67E003B4A5B /* UpdateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 		0C441A7B1775F67E003B4A5B /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		0C441A7F1775FC26003B4A5B /* HealthPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthPlanViewController.h; path = ../HealthPlanViewController.h; sourceTree = "<group>"; };
+		0C441A801775FC26003B4A5B /* HealthPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthPlanViewController.m; path = ../HealthPlanViewController.m; sourceTree = "<group>"; };
+		0C441A811775FC26003B4A5B /* HealthPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HealthPlanViewController.xib; path = ../HealthPlanViewController.xib; sourceTree = "<group>"; };
 		8D1FE2A11775D190000113DE /* Head Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Head Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1FE2A41775D190000113DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8D1FE2A61775D190000113DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +109,9 @@
 				0C441A721775F669003B4A5B /* HomeworkViewController.h */,
 				0C441A731775F669003B4A5B /* HomeworkViewController.m */,
 				0C441A741775F669003B4A5B /* HomeworkViewController.xib */,
+				0C441A7F1775FC26003B4A5B /* HealthPlanViewController.h */,
+				0C441A801775FC26003B4A5B /* HealthPlanViewController.m */,
+				0C441A811775FC26003B4A5B /* HealthPlanViewController.xib */,
 				8D1FE2C11775D1AB000113DE /* View Controllers */,
 				8D1FE2B31775D190000113DE /* AppDelegate.h */,
 				8D1FE2B41775D190000113DE /* AppDelegate.m */,
@@ -192,6 +200,7 @@
 				8D1FE2B91775D190000113DE /* Default@2x.png in Resources */,
 				8D1FE2BB1775D190000113DE /* Default-568h@2x.png in Resources */,
 				8D1FE2C61775D1DF000113DE /* LoginViewController.xib in Resources */,
+				0C441A831775FC26003B4A5B /* HealthPlanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +217,7 @@
 				8D1FE2B11775D190000113DE /* main.m in Sources */,
 				8D1FE2B51775D190000113DE /* AppDelegate.m in Sources */,
 				8D1FE2C51775D1DF000113DE /* LoginViewController.m in Sources */,
+				0C441A821775FC26003B4A5B /* HealthPlanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

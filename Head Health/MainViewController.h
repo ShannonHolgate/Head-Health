@@ -15,5 +15,6 @@
 
 -(IBAction)howAreYou:(id)sender;
 -(IBAction)homeworkView:(id)sender;
+-(IBAction)healthPlanView:(id)sender;
 
 @end

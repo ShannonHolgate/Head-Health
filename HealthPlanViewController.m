@@ -1,18 +1,18 @@
 //
-//  UpdateViewController.m
+//  HealthPlanViewController.m
 //  Head Health
 //
 //  Created by Bradley on 22/06/2013.
 //  Copyright (c) 2013 Health Hack. All rights reserved.
 //
 
-#import "UpdateViewController.h"
+#import "HealthPlanViewController.h"
 
-@interface UpdateViewController ()
+@interface HealthPlanViewController ()
 
 @end
 
-@implementation UpdateViewController
+@implementation HealthPlanViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad
 {
-    self.title = @"Update View";
+    self.title = @"Health Plan";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

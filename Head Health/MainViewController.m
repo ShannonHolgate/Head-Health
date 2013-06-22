@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "UpdateViewController.h"
 #import "HomeworkViewController.h"
+#import "HealthPlanViewController.h"
 
 @interface MainViewController ()
 
@@ -42,6 +43,12 @@
     HomeworkViewController * homeworkvc = [[HomeworkViewController alloc]initWithNibName:@"HomeworkViewController" bundle:nil];
     
     [self.navigationController pushViewController:homeworkvc animated:YES];
+}
+-(IBAction)healthPlanView:(id)sender
+{
+    HealthPlanViewController * healthplanview = [[HealthPlanViewController alloc]initWithNibName:@"HealthPlanViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:healthplanview animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
