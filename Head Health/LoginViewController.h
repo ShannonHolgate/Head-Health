@@ -10,4 +10,9 @@
 
 @interface LoginViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UITextField *usernameField;
+@property (nonatomic, retain) IBOutlet UITextField *passwordField;
+
+-(IBAction)login:(id)sender;
+
 @end

@@ -89,7 +89,6 @@
 				8D1FE2AB1775D190000113DE /* Supporting Files */,
 				8D1FE2C21775D1DF000113DE /* LoginViewController.h */,
 				8D1FE2C31775D1DF000113DE /* LoginViewController.m */,
-				8D1FE2C41775D1DF000113DE /* LoginViewController.xib */,
 			);
 			path = "Head Health";
 			sourceTree = "<group>";
@@ -111,6 +110,7 @@
 		8D1FE2C11775D1AB000113DE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D1FE2C41775D1DF000113DE /* LoginViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -298,6 +298,7 @@
 				8D1FE2C01775D190000113DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

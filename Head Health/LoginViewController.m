@@ -13,6 +13,7 @@
 @end
 
 @implementation LoginViewController
+@synthesize usernameField, passwordField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +29,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (IBAction)login:(id)sender
+{
+    NSString *username = usernameField.text;
+    NSString *password = passwordField.text;
+    
+    if ([username length] == 0 || [password length] == 0)
+    {
+        NSLog(@"Username or Password empty");
+        return;
+    }
+    
+    //Do something here to grab the login
+    //Do something else if the username is not found or password is incorrect
+}
+
+-(void)loginError:
 
 - (void)didReceiveMemoryWarning
 {
