@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeworkViewController : UIViewController
-
+@interface HomeworkViewController : UITableViewController
+{
+    
+}
 @end
