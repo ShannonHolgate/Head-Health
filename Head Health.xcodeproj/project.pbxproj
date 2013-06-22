@@ -28,6 +28,8 @@
 		8D1FE2DE17760A63000113DE /* HealthPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2DC17760A63000113DE /* HealthPlanViewController.xib */; };
 		8D1FE2E3177639D6000113DE /* stuff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2E2177639D6000113DE /* stuff.png */; };
 		8D1FE2E517763A5B000113DE /* stuff2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2E417763A5B000113DE /* stuff2.png */; };
+		8D1FE2E717763E8F000113DE /* hh-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2E617763E8F000113DE /* hh-logo.png */; };
+		8D1FE2E9177643D4000113DE /* smallFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1FE2E8177643D4000113DE /* smallFace.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		8D1FE2DC17760A63000113DE /* HealthPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthPlanViewController.xib; sourceTree = "<group>"; };
 		8D1FE2E2177639D6000113DE /* stuff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stuff.png; sourceTree = "<group>"; };
 		8D1FE2E417763A5B000113DE /* stuff2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stuff2.png; sourceTree = "<group>"; };
+		8D1FE2E617763E8F000113DE /* hh-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hh-logo.png"; sourceTree = "<group>"; };
+		8D1FE2E8177643D4000113DE /* smallFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallFace.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 		8D1FE2DF17763391000113DE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				8D1FE2E8177643D4000113DE /* smallFace.png */,
+				8D1FE2E617763E8F000113DE /* hh-logo.png */,
 				8D1FE2E2177639D6000113DE /* stuff.png */,
 				8D1FE2E417763A5B000113DE /* stuff2.png */,
 			);
@@ -224,6 +230,8 @@
 				8D1FE2DE17760A63000113DE /* HealthPlanViewController.xib in Resources */,
 				8D1FE2E3177639D6000113DE /* stuff.png in Resources */,
 				8D1FE2E517763A5B000113DE /* stuff2.png in Resources */,
+				8D1FE2E717763E8F000113DE /* hh-logo.png in Resources */,
+				8D1FE2E9177643D4000113DE /* smallFace.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuartzCore/CALayer.h"
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextField *usernameField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;
+@property (nonatomic, retain) IBOutlet UIImageView *placeholder;
 
 -(IBAction)login:(id)sender;
 

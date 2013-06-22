@@ -13,7 +13,7 @@
 @end
 
 @implementation LoginViewController
-@synthesize usernameField, passwordField;
+@synthesize usernameField, passwordField, placeholder;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,12 @@
     // Do any additional setup after loading the view from its nib.
     usernameField.delegate = self;
     passwordField.delegate = self;
+    
+    placeholder.layer.shadowColor = [UIColor purpleColor].CGColor;
+    placeholder.layer.shadowOffset = CGSizeMake(0, 1);
+    placeholder.layer.shadowOpacity = 1;
+    placeholder.layer.shadowRadius = 1.0;
+    placeholder.clipsToBounds = NO;
     
 }
 
