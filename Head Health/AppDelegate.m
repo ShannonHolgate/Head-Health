@@ -23,6 +23,7 @@
     self.firstView = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
     
     UINavigationController * navcontroller = [[UINavigationController alloc] initWithRootViewController:self.firstView];
+    navcontroller.navigationBar.barStyle = UIBarStyleBlack;
     [[self window] setRootViewController:navcontroller];
     
     return YES;

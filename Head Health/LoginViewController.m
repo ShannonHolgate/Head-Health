@@ -54,7 +54,8 @@
     {
         //Do something here to grab the login
         //Do something else if the username is not found or password is incorrect
-        [self dismissViewControllerAnimated:NO completion:nil];
+        self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
