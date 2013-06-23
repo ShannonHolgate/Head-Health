@@ -58,6 +58,15 @@ BOOL loggedin = false;
     [self.navigationController setNavigationBarHidden:YES];
     [super viewWillAppear:YES];
 }
+-(IBAction)logOut:(id)sender
+{
+    loggedin = false;
+    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+    
+    // show the navigation controller modally
+    [self presentViewController:login animated:NO completion:nil];
+    
+}
 -(IBAction)howAreYou:(id)sender
 {
     UpdateViewController * howareyou = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];

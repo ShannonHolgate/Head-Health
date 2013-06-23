@@ -61,7 +61,6 @@ int moodInt;
     
     // Do any additional setup after loading the view from its nib.
 }
-
 -(void)selectView:(UITapGestureRecognizer *)gesture
 {
     for (int i=0; i<[images count]; i++) {
@@ -76,6 +75,20 @@ int moodInt;
     
     moodInt = image.tag;
     NSLog(@"mood int: %i", moodInt);
+}
+- (IBAction)saveInfo:(id)sender
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Thank You!"
+                                                      message:@"Your information has been saved successfully"
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [message show];
+    
+}
+-(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)dismissKeyboard:(UITapGestureRecognizer *)gestureRecognizer {
