@@ -15,19 +15,11 @@
 @implementation HomeworkViewController
 
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Homework";
+    self.planArray = [[NSArray alloc]initWithObjects:@"Go for Walk",@"Talk to friends",@"Ring home",nil];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -47,27 +39,36 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [self.planArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] ;
+	}
     
-    //cell.accessoryType = [UITableViewCellAccessoryCheckmark];
+    cell.textLabel.text = [self.planArray objectAtIndex:indexPath.section];
+    
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;
 }
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 120;
+//}
 
 /*
  // Override to support conditional editing of the table view.
@@ -119,6 +120,19 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
+    if([self.tableView cellForRowAtIndexPath:indexPath].accessoryType != UITableViewCellAccessoryCheckmark)
+    {
+        [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+               
+    }
+    else if([self.tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
+    {
+        [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+        
+    }
+    
+    
 }
 
 

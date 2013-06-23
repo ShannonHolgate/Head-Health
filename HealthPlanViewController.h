@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HealthPlanViewController : UITableViewController
+{
+    NSArray * planArray;
+}
+
+@property(nonatomic,retain) NSArray * planArray;
 
 @end

@@ -14,6 +14,8 @@
 
 @implementation HealthPlanViewController
 
+@synthesize planArray;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -27,6 +29,7 @@
 {
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Health Plan";
+    self.planArray = [[NSArray alloc]initWithObjects:@"Stay Well: ", @"Triggers: ",@"Symptoms: ",@"Signs I need Help: ",@"Getting Help: ",nil];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -46,26 +49,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 3;
+    return [self.planArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] ;
+	}
     
     //cell.accessoryType = [UITableViewCellAccessoryCheckmark];
+    cell.textLabel.text = [self.planArray objectAtIndex:indexPath.section];
     
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120;
 }
 
 /*

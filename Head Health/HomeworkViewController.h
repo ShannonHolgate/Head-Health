@@ -10,6 +10,9 @@
 
 @interface HomeworkViewController : UITableViewController
 {
-    
+    NSArray * planArray;
 }
+
+@property(nonatomic,retain) NSArray * planArray;
+
 @end
