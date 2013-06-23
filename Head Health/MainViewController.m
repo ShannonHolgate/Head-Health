@@ -32,6 +32,7 @@ BOOL loggedin = false;
 - (void)viewDidLoad
 {
     self.title  = @"Main";
+    [self.navigationController setNavigationBarHidden:YES];
     [super viewDidLoad];
     
     if (!loggedin)
@@ -44,6 +45,12 @@ BOOL loggedin = false;
     }
     // Do any additional setup after loading the view from its nib.
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+    [super viewWillAppear:YES];
+}
 -(IBAction)howAreYou:(id)sender
 {
     UpdateViewController * howareyou = [[UpdateViewController alloc]initWithNibName:@"UpdateViewController" bundle:nil];
@@ -52,13 +59,13 @@ BOOL loggedin = false;
 }
 -(IBAction)homeworkView:(id)sender
 {
-    HomeworkViewController * homeworkvc = [[HomeworkViewController alloc]initWithNibName:@"HomeworkViewController" bundle:nil];
+    HomeworkViewController * homeworkvc = [[HomeworkViewController alloc]initWithStyle:UITableViewStyleGrouped];
     
     [self.navigationController pushViewController:homeworkvc animated:YES];
 }
 -(IBAction)healthPlanView:(id)sender
 {
-    HealthPlanViewController * healthplanview = [[HealthPlanViewController alloc]initWithNibName:@"HealthPlanViewController" bundle:nil];
+    HealthPlanViewController * healthplanview = [[HealthPlanViewController alloc]initWithStyle:UITableViewStyleGrouped];
     
     [self.navigationController pushViewController:healthplanview animated:YES];
 }

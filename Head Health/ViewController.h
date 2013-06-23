@@ -1,5 +1,5 @@
 //
-//  HealthPlanViewController.h
+//  ViewController.h
 //  Head Health
 //
 //  Created by Bradley on 22/06/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HealthPlanViewController : UITableViewController
+@interface ViewController : UITableViewController
 
 @end

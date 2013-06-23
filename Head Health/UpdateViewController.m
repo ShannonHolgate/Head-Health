@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad
 {
+       [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Update View";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
