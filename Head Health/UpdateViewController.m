@@ -7,6 +7,7 @@
 //
 
 #import "UpdateViewController.h"
+#import "AppDelegate.h"
 
 @interface UpdateViewController ()
 
@@ -78,17 +79,62 @@ int moodInt;
 }
 - (IBAction)saveInfo:(id)sender
 {
+    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSString * message = [messageText.text stringByReplacingOccurrencesOfString:@"." withString:@""];
+    
+    NSString *postString = [NSString stringWithFormat:@"http://headhealth.herokuapp.com/services/insertMoodForUserId?Message=%@&MoodNumber=%i&UserId=%@",message,moodInt,[appDelegate.userDict objectForKey:@"id"]];
+    NSString * formattedString = [postString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    NSURL *aUrl = [NSURL URLWithString:formattedString];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aUrl
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    
+    NSLog(@"url = %@",formattedString);
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request
+                                                                 delegate:self];
+    [connection start];
+    
+}
+
+-(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1)
+    {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    else
+    {
+        //do nothing
+    }
+}
+
+-(void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    
+    
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Thank You!"
                                                       message:@"Your information has been saved successfully"
                                                      delegate:self
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
+    message.tag = 1;
     [message show];
-    
 }
--(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+
+-(void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:@"Something went wrong"
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    message.tag = 2;
+    [message show];
 }
 
 -(void)dismissKeyboard:(UITapGestureRecognizer *)gestureRecognizer {
