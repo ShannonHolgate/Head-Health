@@ -12,7 +12,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *usernameField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;
-@property (nonatomic, retain) IBOutlet UIImageView *placeholder;
+@property (nonatomic, retain) IBOutlet UIView *placeholder;
 
 -(IBAction)login:(id)sender;
 

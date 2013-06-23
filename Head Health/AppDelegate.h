@@ -21,5 +21,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,retain) MainViewController * firstView;
+@property (nonatomic, retain) NSDictionary* userDict;
+@property BOOL loggedin;
 
 @end

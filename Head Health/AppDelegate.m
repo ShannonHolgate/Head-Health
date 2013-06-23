@@ -26,13 +26,6 @@
     navcontroller = [[UINavigationController alloc] initWithRootViewController:self.firstView];
     navcontroller.navigationBar.barStyle = UIBarStyleBlack;
     
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Logout"
-                                   style:UIBarButtonItemStyleBordered
-                                   target:self
-                                     action:@selector(logout)];
-    navcontroller.topViewController.navigationItem.leftBarButtonItem = logoutButton;
-    
     [[self window] setRootViewController:navcontroller];
     
     return YES;

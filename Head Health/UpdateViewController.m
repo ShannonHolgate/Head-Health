@@ -28,7 +28,7 @@ int moodInt;
 
 - (void)viewDidLoad
 {
-       [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Update View";
     [super viewDidLoad];
     

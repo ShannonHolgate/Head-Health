@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -31,10 +32,7 @@
     usernameField.delegate = self;
     passwordField.delegate = self;
     
-    placeholder.layer.shadowColor = [UIColor purpleColor].CGColor;
-    placeholder.layer.shadowOffset = CGSizeMake(0, 1);
-    placeholder.layer.shadowOpacity = 1;
-    placeholder.layer.shadowRadius = 1.0;
+    placeholder.layer.cornerRadius = 15.0f;
     placeholder.clipsToBounds = NO;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -58,10 +56,41 @@
     }
     else
     {
+        NSString * urlString = [NSString stringWithFormat:@"http://localhost:3000/services/authenticate?UserId=%@&password=%@",username, password];
+        NSString * formattedURL = [urlString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         //Do something here to grab the login
         //Do something else if the username is not found or password is incorrect
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:formattedURL]];
+            [self performSelectorOnMainThread:@selector(fetchedData:)
+                                   withObject:data waitUntilDone:YES];
+        });
+        
+    }
+}
+
+- (void)fetchedData:(NSData *)responseData {
+    //parse out the json data
+    NSError* error;
+    
+    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    appDelegate.userDict = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                options:kNilOptions
+                                                                error:&error];
+    
+    if (nil != appDelegate.userDict)
+    {
+        NSLog(@"name: %@", [appDelegate.userDict objectForKey:@"name"]);
+        appDelegate.loggedin = YES;
+        
         self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else
+    {
+        [self loginError:usernameError];
+        [self dismissKeyboard];
     }
 }
 

@@ -11,15 +11,14 @@
 #import "HomeworkViewController.h"
 #import "HealthPlanViewController.h"
 #import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
-@synthesize placeholder;
-
-BOOL loggedin = false;
+@synthesize placeholder, name;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,31 +35,41 @@ BOOL loggedin = false;
     [self.navigationController setNavigationBarHidden:YES];
     [super viewDidLoad];
     
-    placeholder.layer.shadowColor = [UIColor purpleColor].CGColor;
-    placeholder.layer.shadowOffset = CGSizeMake(0, 1);
-    placeholder.layer.shadowOpacity = 1;
-    placeholder.layer.shadowRadius = 1.0;
+    placeholder.layer.cornerRadius = 15.0f;
     placeholder.clipsToBounds = NO;
     
-    if (!loggedin)
-    {
-        LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
 
-        // show the navigation controller modally
-        [self presentViewController:login animated:NO completion:nil];
-        
-    }
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES];
     [super viewWillAppear:YES];
 }
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    if (!appDelegate.loggedin)
+    {
+        LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+        
+        // show the navigation controller modally
+        [self presentViewController:login animated:NO completion:nil];
+        
+    }
+    else
+    {
+        name.text = [appDelegate.userDict objectForKey:@"name"];
+    }
+}
+
 -(IBAction)logOut:(id)sender
 {
-    loggedin = false;
+    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    appDelegate.loggedin = false;
+    name.text = @"";
     LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
     
     // show the navigation controller modally

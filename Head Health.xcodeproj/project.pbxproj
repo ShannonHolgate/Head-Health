@@ -40,6 +40,9 @@
 		8DB8D1801776A21E0072FC64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8D17F1776A21E0072FC64 /* Default@2x.png */; };
 		8DB8D1821776A2C40072FC64 /* defaultsomething.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8D1811776A2C40072FC64 /* defaultsomething.png */; };
 		8DB8D1841776A2CF0072FC64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8D1831776A2CF0072FC64 /* Default.png */; };
+		8DB8D1881776C66D0072FC64 /* btn_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8D1851776C66D0072FC64 /* btn_green.png */; };
+		8DB8D1891776C66D0072FC64 /* btn_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8D1861776C66D0072FC64 /* btn_grey.png */; };
+		8DB8D18A1776C66D0072FC64 /* btn_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB8D1871776C66D0072FC64 /* btn_red.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +88,9 @@
 		8DB8D17F1776A21E0072FC64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8DB8D1811776A2C40072FC64 /* defaultsomething.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultsomething.png; sourceTree = "<group>"; };
 		8DB8D1831776A2CF0072FC64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8DB8D1851776C66D0072FC64 /* btn_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_green.png; path = "Head Health/assets/btn_green.png"; sourceTree = "<group>"; };
+		8DB8D1861776C66D0072FC64 /* btn_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_grey.png; path = "Head Health/assets/btn_grey.png"; sourceTree = "<group>"; };
+		8DB8D1871776C66D0072FC64 /* btn_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_red.png; path = "Head Health/assets/btn_red.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 		8D1FE2981775D190000113DE = {
 			isa = PBXGroup;
 			children = (
+				8DB8D1851776C66D0072FC64 /* btn_green.png */,
+				8DB8D1861776C66D0072FC64 /* btn_grey.png */,
+				8DB8D1871776C66D0072FC64 /* btn_red.png */,
 				8DB8D1831776A2CF0072FC64 /* Default.png */,
 				8DB8D17F1776A21E0072FC64 /* Default@2x.png */,
 				8DB8D1791776A01B0072FC64 /* Default-568h@2x.png */,
@@ -272,6 +281,9 @@
 				8DB8D1801776A21E0072FC64 /* Default@2x.png in Resources */,
 				8DB8D1821776A2C40072FC64 /* defaultsomething.png in Resources */,
 				8DB8D1841776A2CF0072FC64 /* Default.png in Resources */,
+				8DB8D1881776C66D0072FC64 /* btn_green.png in Resources */,
+				8DB8D1891776C66D0072FC64 /* btn_grey.png in Resources */,
+				8DB8D18A1776C66D0072FC64 /* btn_red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

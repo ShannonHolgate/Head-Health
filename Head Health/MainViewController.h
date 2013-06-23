@@ -13,7 +13,8 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UIImageView *placeholder;
+@property (nonatomic, retain) IBOutlet UIView *placeholder;
+@property (nonatomic, retain) IBOutlet UILabel *name;
 
 -(IBAction)howAreYou:(id)sender;
 -(IBAction)homeworkView:(id)sender;
