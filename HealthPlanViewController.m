@@ -29,7 +29,7 @@
 {
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Health Plan";
-    self.planArray = [[NSArray alloc]initWithObjects:@"Stay Well: ", @"Triggers: ",@"Symptoms: ",@"Signs I need Help: ",@"Getting Help: ",nil];
+    self.planArray = [[NSArray alloc]initWithObjects:@"Stay Well: Regular Exercise and healthy diet", @"Triggers: Noisy Enviroments, Clutter and looking for lost items ",@"Symptoms: Memory Loss, No focus and unable to pay attention ",@"Signs I need Help: Recent memory loss and difficulty performing familiar tasks",@"Getting Help: Close family, friends and dementia support line ",nil];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -69,6 +69,8 @@
     
     //cell.accessoryType = [UITableViewCellAccessoryCheckmark];
     cell.textLabel.text = [self.planArray objectAtIndex:indexPath.section];
+    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.textLabel.numberOfLines = 3;
     
     return cell;
 }

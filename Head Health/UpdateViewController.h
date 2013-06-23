@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UpdateViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface UpdateViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate,UIAlertViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextView *messageText;
 @property (nonatomic, retain) UITapGestureRecognizer *tap;

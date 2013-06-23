@@ -19,7 +19,7 @@
 {
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Homework";
-    self.planArray = [[NSArray alloc]initWithObjects:@"Go for Walk",@"Talk to friends",@"Ring home",nil];
+    self.planArray = [[NSArray alloc]initWithObjects:@"1. Go for Walk",@"2. Talk to friends",@"3. Ring home",@"4. Go to Yoga",nil];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
