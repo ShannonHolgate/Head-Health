@@ -48,7 +48,7 @@
     NSString *username = usernameField.text;
     NSString *password = passwordField.text;
     
-    /*if ([username length] == 0 || [password length] == 0)
+    if ([username length] == 0 || [password length] == 0)
     {
         NSLog(@"Username or Password empty");
         [self loginError:usernameError];
@@ -56,7 +56,7 @@
     }
     else
     {
-        NSString * urlString = [NSString stringWithFormat:@"http://headhealth.herokuapp.org/services/authenticate?UserId=%@&password=%@",username, password];
+        NSString * urlString = [NSString stringWithFormat:@"http://headhealth.herokuapp.com/services/authenticate?UserId=%@&password=%@",username, password];
         NSString * formattedURL = [urlString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         //Do something here to grab the login
         //Do something else if the username is not found or password is incorrect
@@ -68,11 +68,6 @@
         });
         
     }
-     */
-    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    appDelegate.loggedin = YES;
-    self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)fetchedData:(NSData *)responseData {
