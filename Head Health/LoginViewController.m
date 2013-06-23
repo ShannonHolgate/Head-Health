@@ -37,6 +37,12 @@
     placeholder.layer.shadowRadius = 1.0;
     placeholder.clipsToBounds = NO;
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
 }
 
 - (IBAction)login:(id)sender
@@ -82,6 +88,11 @@
     {
         [alert show];
     }
+}
+
+-(void)dismissKeyboard {
+    [usernameField resignFirstResponder];
+    [passwordField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

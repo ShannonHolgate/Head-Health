@@ -10,10 +10,14 @@
 
 @class MainViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
 {
     MainViewController * firstView;
+    UINavigationController * navcontroller;
 }
+
+-(void)logout;
+-(void)setViewHome;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,retain) MainViewController * firstView;

@@ -13,6 +13,8 @@
 
 }
 
+@property (nonatomic, retain) IBOutlet UIImageView *placeholder;
+
 -(IBAction)howAreYou:(id)sender;
 -(IBAction)homeworkView:(id)sender;
 -(IBAction)healthPlanView:(id)sender;

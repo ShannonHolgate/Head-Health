@@ -17,6 +17,7 @@
 @end
 
 @implementation MainViewController
+@synthesize placeholder;
 
 BOOL loggedin = false;
 
@@ -34,6 +35,12 @@ BOOL loggedin = false;
     self.title  = @"Main";
     [self.navigationController setNavigationBarHidden:YES];
     [super viewDidLoad];
+    
+    placeholder.layer.shadowColor = [UIColor purpleColor].CGColor;
+    placeholder.layer.shadowOffset = CGSizeMake(0, 1);
+    placeholder.layer.shadowOpacity = 1;
+    placeholder.layer.shadowRadius = 1.0;
+    placeholder.clipsToBounds = NO;
     
     if (!loggedin)
     {

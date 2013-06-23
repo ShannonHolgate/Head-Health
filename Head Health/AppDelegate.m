@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -22,11 +23,35 @@
     
     self.firstView = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
     
-    UINavigationController * navcontroller = [[UINavigationController alloc] initWithRootViewController:self.firstView];
+    navcontroller = [[UINavigationController alloc] initWithRootViewController:self.firstView];
     navcontroller.navigationBar.barStyle = UIBarStyleBlack;
+    
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Logout"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                     action:@selector(logout)];
+    navcontroller.topViewController.navigationItem.leftBarButtonItem = logoutButton;
+    
     [[self window] setRootViewController:navcontroller];
     
     return YES;
+}
+
+- (void)logout
+{
+    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+    
+    // show the navigation controller modally
+    login.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self.firstView presentViewController:login animated:YES completion:^{
+        [self setViewHome];
+    }];
+}
+
+-(void)setViewHome
+{
+    [navcontroller popToRootViewControllerAnimated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
